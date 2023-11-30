@@ -13,49 +13,73 @@
   <title>Greater Brisbane</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
   <style type="text/css">
+    :root {
+      --bgcolor: #56adc7ff;
+    }
+
     body {
       display: grid;
       background-image: url("static/streets.jpg");
+      background-color: var(--bgcolor);
       background-size: cover;
       font-family: 'Inter', sans-serif;
+      font-size: xx-large;
+      justify-content: space-evenly;
+      justify-items: center;
+      align-content: space-between;
+      align-items: end;
     }
 
-    main {
-      place-self: center;
+    header {
       align-items: center;
-      justify-content: center;
+      justify-content: space-evenly;
       background-color: #fffc;
       padding: 2vw;
       margin: 10vw;
       border-radius: 2vw;
     }
 
+    footer {
+      position: absolute;
+      font-size: x-small;
+      bottom: 1rem;
+      right: 1rem;
+      color: #fffc;
+      width: auto;
+    }
+
     h1,
-    h2 {
+    p {
       text-align: center;
-      place-self: center;
     }
 
     h1 {
       font-size: 5vw;
+      font-weight: bolder;
+      // font-weight: 900;
     }
 
     a {
-      color: black
+      color: inherit;
     }
   </style>
 </head>
 
 <body>
-  <main>
-    <h1>GREATER BRISBANE</h1>
-    <h2>For abundant housing and livable communities.</h2>
-    <h2><a href="https://discord.gg/mMSj27VKyj">
+  <header>
+    <h1>Greater Brisbane</h1>
+    <p>For abundant housing and livable communities.</p>
+    <p><a href="https://discord.gg/mMSj27VKyj">
         &#x1F47E; Discord</a>
-    </h2>
-  </main>
+    </p>
+  </header>
+  <footer>
+    <p style="background-color: var(--bgcolor); padding: 1em; border-radius: 2em;"><a
+        href="https://flickr.com/photos/parrastreets/49788465671/">Image
+        credit</a></p>
+  </footer>
 </body>
 
 </html>
