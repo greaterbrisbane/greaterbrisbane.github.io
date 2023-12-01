@@ -1,0 +1,31 @@
+---
+
+---
+
+@import "{{ site.theme }}";
+
+body {
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 3rem;
+}

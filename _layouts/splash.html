@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+{%- include head.html -%}
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+  <style type="text/css">
+    body {
+      scroll-snap-type: proximity;
+    }
+
+    #splash {
+      height: 100vh;
+      display: grid;
+      background-image: url("{{ page.bg_image_link  }}");
+      background-color: var(--bgcolor);
+      background-size: cover;
+      font-size: xx-large;
+      justify-content: space-evenly;
+      justify-items: center;
+      align-content: space-between;
+      align-items: end;
+      margin: 0;
+      text-align: center;
+      scroll-snap-align: center;
+    }
+
+    #splash>header {
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: #fffc;
+      padding: 2vw;
+      margin: 10vw;
+      border-radius: 2vw;
+    }
+
+    #splash a {
+      color: inherit;
+    }
+
+    #image-credit {
+      position: absolute;
+      font-size: x-small;
+      bottom: 1rem;
+      right: 1rem;
+      color: #000;
+      width: auto;
+      background-color: #fffc;
+      padding: 0.5em;
+      border-radius: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- {%- include header.html -%} -->
+  <div id="splash">
+    <header>
+      <h1>{{site.title}}</h1>
+      <p>For abundant housing and livable communities.</p>
+      <p><a href="{{site.discord_invite}}">
+          &#x1F47E; Discord</a>
+      </p>
+      <p><a href="mailto:{{ site.email }}">&#9993; Email</a>
+    </header>
+    <div id="image-credit">
+      <a href="{{ page.bg_image_credit }}">Image
+        credit</a>
+    </div>
+  </div>
+  <!--- <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {{ content }}
+      </div>
+  </main> --->
+</body>
+
+</html>
