@@ -1,47 +1,32 @@
+---
+
+---
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: " en" }}">
 {%- include head.html -%}
+{%- include custom_head.html -%}
 
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;900&family=Inter:wght@400;900&display=swap"
+    rel="stylesheet">
   <style type="text/css">
     body {
       scroll-snap-type: proximity;
     }
 
     #splash {
-      height: 100vh;
+      background-color: {{site.theme_color}};
       display: grid;
-      background-image: url("{{ page.bg_image_link  }}");
-      background-color: var(--bgcolor);
-      background-size: cover;
-      font-size: 3vw;
+      width: 100vw;
       justify-content: space-evenly;
       justify-items: center;
-      align-content: space-between;
+      align-content: end;
       align-items: end;
       margin: 0;
       text-align: center;
       scroll-snap-align: center;
-    }
-
-    #splash header {
-      align-items: center;
-      justify-content: space-evenly;
-      background-color: #fffc;
-      padding: 2vw;
-      margin: 10vw;
-      border-radius: 2vw;
-    }
-
-    #splash h1 {
-      font-size: 6vw;
-    }
-
-    #splash a {
-      color: inherit;
     }
 
     #image-credit {
@@ -51,7 +36,7 @@
       right: 1rem;
       color: #000;
       width: auto;
-      background-color: #fffc;
+      background-color:: {{site.theme_color}};
       padding: 0.5em;
       border-radius: 1em;
     }
@@ -59,26 +44,32 @@
 </head>
 
 <body>
-  <!-- {%- include header.html -%} -->
-  <div id="splash">
-    <header>
-      <h1>{{site.title}}</h1>
-      <p>For abundant housing and livable communities.</p>
-      <p><a href="{{site.discord_invite}}">
-          &#x1F47E; Discord</a>
+  <div id="splash" >
+          <img src={{ page.bg_image_link }} style="height: 50vh;" alt="Brisbane River logo motif">
+       <h2>{{site.description}}</h2> 
+      <div> 
+       <p class="hl"><a href="https://twitter.com/{{ site.twitter_username}}"><i class="fa-brands fa-twitter"></i> Twitter</a></p>
+      <p class="hl"><a href="{{site.discord_invite}}">
+          <i class="fa-brands fa-discord"></i> Discord</a>
       </p>
-      <p><a href="mailto:{{ site.email }}">&#9993; Email</a>
-    </header>
+      <p class="hl"><a href="mailto:{{ site.email }}"><i class="fa fa-envelope"></i> Email</a></p>
+      </div>
+    {% if page.bg_image_credit %}
     <div id="image-credit">
       <a href="{{ page.bg_image_credit }}">Image
         credit</a>
     </div>
+    {% endif %}
   </div>
-  <!--- <main class="page-content" aria-label="Content">
+  {% assign contentw = content | strip %}
+  {% if "" != contentw %}
+  <main class="page-content" aria-label="Content">
     <div class="wrapper">
       {{ content }}
-      </div>
-  </main> --->
+    </div>
+  </main>
+  {% endif %}
+  {% include footer.html %}
 </body>
 
 </html>

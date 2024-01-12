@@ -1,19 +1,39 @@
----
+--- 
 
----
+--- 
+$fa-font-path: "fonts/font-awesome/";
+@import 'font-awesome';
 
 @import "{{ site.theme }}";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;900&family=Inter:wght@400;700;900&display=swap');
 
 body {
   padding: 0;
   font-family: 'Inter', sans-serif;
+  font-size: 14pt;
 }
 
-a {
+a,
+a:visited {
   color: inherit;
+  font-weight: 500;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bolder;
+
+h1,h2,h3,h4,h5,h6,header {
+  font-family: 'Inter';
+  font-weight: 500;
+  letter-spacing: -0.025ch;
+}
+
+.hl {
+  /* Highlighted */
+  background-origin: content-box;
+  background-size: 100% 100%;
+  background-repeat: repeat-x;
+  background-position-y: 64%;  
+  display: inline-block;
+  padding-inline: 0.2em;
+  color: #011A21;
+  background-color: {{site.theme_color}}; 
 }
