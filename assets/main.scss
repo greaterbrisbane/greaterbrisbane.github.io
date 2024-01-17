@@ -71,6 +71,7 @@ h1,h2,h3,h4,h5,h6,header {
       hsl(197, 71%, 73%) 80%,
       hsl(197, 71%, 73%) 100%,
   );
+  z-index: -1;
     }
 
 .site-footer::before {
@@ -93,4 +94,5 @@ h1,h2,h3,h4,h5,h6,header {
   );
   top: -30px;
   left: 0;
+  z-index: -1;
 }
