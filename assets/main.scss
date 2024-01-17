@@ -4,6 +4,7 @@
 @import "{{ site.theme }}";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
+
 body {
   padding: 0;
   font-family: 'Inter', sans-serif;
@@ -18,8 +19,8 @@ a:visited {
 
 main a, main a:visited
 {
-  color: #87CEEB;
-  font-weight: 500;
+  // color: #87CEEB;
+  text-decoration: underline;
 }
 
 
@@ -39,4 +40,57 @@ h1,h2,h3,h4,h5,h6,header {
   padding-inline: 0.2em;
   color: #011A21;
   background-color: {{site.theme_color}}; 
+}
+
+.site-title::before {
+  content: "";
+  background-image: url('/assets/images/favicon.png');
+  display:inline-block;
+  background-size: cover;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.3em;
+  object-fit: scale-down;
+}
+
+.site-header::after {
+    content: '';
+    position:relative;
+    display: block;
+    width:100%;
+    height:0.5em;
+    background: linear-gradient(
+      90deg,
+    	hsl(51, 100%, 59%) 20%,
+      hsl(16, 100%, 50%) 20%,
+      hsl(16, 100%, 50%) 40%,
+      hsl(269, 51%, 69%) 40%,
+      hsl(269, 51%, 69%) 60%,
+      hsl(103, 31%, 51%) 60%,
+      hsl(103, 31%, 51%) 80%,
+      hsl(197, 71%, 73%) 80%,
+      hsl(197, 71%, 73%) 100%,
+  );
+    }
+
+.site-footer::before {
+    content: '';
+    position:relative;
+    display: block;
+    width:100%;
+    height:0.5em;
+    background: linear-gradient(
+      90deg,
+    	hsl(51, 100%, 59%) 20%,
+      hsl(16, 100%, 50%) 20%,
+      hsl(16, 100%, 50%) 40%,
+      hsl(269, 51%, 69%) 40%,
+      hsl(269, 51%, 69%) 60%,
+      hsl(103, 31%, 51%) 60%,
+      hsl(103, 31%, 51%) 80%,
+      hsl(197, 71%, 73%) 80%,
+      hsl(197, 71%, 73%) 100%,
+  );
+  top: -30px;
+  left: 0;
 }
