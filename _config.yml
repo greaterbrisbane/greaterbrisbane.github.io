@@ -20,9 +20,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.greaterbrisbane.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: greaterbne
-# github_username:  jekyll
-discord_invite: https://discord.gg/fcr74BgzZU
+discord_invite: https://discord.gg/fcr74BgzZyU
 theme_color: "#ffe12dff"
+rss: Posts # this is just the display text, not the link
+# authorisation: >-
+
 
 
 # Build settings
@@ -46,3 +48,11 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+social_links:
+  - { platform: discord,         name: "Discord",         url: "https://discord.gg/fcr74BgzZU" }
+  - { platform: github,        name: "greaterbrisbane",         url: "https://github.com/greaterbrisbane" }
+  - { platform: linkedin,      name: "LinkedIn",         url: "https://www.linkedin.com/company/greaterbrisbane" }
+  - { platform: twitter,       name: "Twitter",         url: "https://twitter.com/greaterbne" }
+  - { platform: rss,      name: "Feed",         url: "/feed.xml" }
