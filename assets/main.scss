@@ -4,6 +4,12 @@
 @import "{{ site.theme }}";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
+$brand-color:      #FFE12D;
+$secondary-color:  #FF4500;
+$tertiary-1-color: #B089D9;
+$tertiary-2-color: #71A95A;
+$tertiary-3-color: #87CEEB;
+$text-color:       #011A21;
 
 body {
   padding: 0;
@@ -17,10 +23,12 @@ a:visited {
   font-weight: 500;
 }
 
-main a, main a:visited
-{
-  // color: #87CEEB;
-  text-decoration: underline;
+main a , main a:visited {
+  text-decoration: underline; 
+  text-decoration-skip-ink: none;
+  text-decoration-color: $brand-color;
+  text-decoration-thickness: 1.2em;
+  text-underline-offset: -0.9em;
 }
 
 
@@ -37,9 +45,9 @@ h1,h2,h3,h4,h5,h6,header {
   background-repeat: repeat-x;
   background-position-y: 64%;  
   display: inline-block;
-  padding-inline: 0.2em;
-  color: #011A21;
-  background-color: {{site.theme_color}}; 
+  padding-inline: 1em;
+  color: $text-color;
+  background-color: $brand-color; 
 }
 
 .site-title::before {
@@ -53,7 +61,7 @@ h1,h2,h3,h4,h5,h6,header {
   object-fit: scale-down;
 }
 
-.site-header::after {
+.site-header::after,.site-footer::before {
     content: '';
     position:relative;
     display: block;
@@ -61,40 +69,22 @@ h1,h2,h3,h4,h5,h6,header {
     height:0.5em;
     background: linear-gradient(
       90deg,
-    	hsl(51, 100%, 59%) 20%,
-      hsl(16, 100%, 50%) 20%,
-      hsl(16, 100%, 50%) 40%,
-      hsl(269, 51%, 69%) 40%,
-      hsl(269, 51%, 69%) 60%,
-      hsl(103, 31%, 51%) 60%,
-      hsl(103, 31%, 51%) 80%,
-      hsl(197, 71%, 73%) 80%,
-      hsl(197, 71%, 73%) 100%,
+    	$brand-color 20%,
+      $secondary-color 20%,
+      $secondary-color 40%,
+      $tertiary-1-color 40%,
+      $tertiary-1-color 60%,
+      $tertiary-2-color 60%,
+      $tertiary-2-color 80%,
+      $tertiary-3-color 80%,
+      $tertiary-3-color 100%,
   );
   z-index: -1;
-    }
+}
 
 .site-footer::before {
-    content: '';
-    position:relative;
-    display: block;
-    width:100%;
-    height:0.5em;
-    background: linear-gradient(
-      90deg,
-    	hsl(51, 100%, 59%) 20%,
-      hsl(16, 100%, 50%) 20%,
-      hsl(16, 100%, 50%) 40%,
-      hsl(269, 51%, 69%) 40%,
-      hsl(269, 51%, 69%) 60%,
-      hsl(103, 31%, 51%) 60%,
-      hsl(103, 31%, 51%) 80%,
-      hsl(197, 71%, 73%) 80%,
-      hsl(197, 71%, 73%) 100%,
-  );
   top: -30px;
   left: 0;
-  z-index: -1;
 }
 
 .social-media-list {
@@ -117,3 +107,26 @@ h1,h2,h3,h4,h5,h6,header {
   padding-top: 0;
 }
 
+.splash {
+  background-color: $brand-color;
+  display: grid;
+  width: 100vw;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: end;
+  align-items: end;
+  margin: 0;
+  text-align: center;
+}
+
+.image-credit {
+  position: absolute;
+  font-size: x-small;
+  bottom: 1rem;
+  right: 1rem;
+  color: $text-color;
+  width: auto;
+  background-color: $brand-color;
+  padding: 0.5em;
+  border-radius: 1em;
+}

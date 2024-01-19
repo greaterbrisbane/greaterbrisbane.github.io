@@ -19,12 +19,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   For abundant housing and livable communities.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.greaterbrisbane.org" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: greaterbne
-discord_invite: https://discord.gg/fcr74BgzZU
-theme_color: "#ffe12dff"
 rss: Posts # this is just the display text, not the link
 # authorisation: >-
-
 
 
 # Build settings
@@ -34,7 +30,7 @@ plugins:
   - jekyll-feed
   - jekyll-font-awesome-sass
 
-  # Exclude from processing.
+# Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 # exclude:

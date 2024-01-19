@@ -16,47 +16,38 @@
       scroll-snap-type: proximity;
     }
 
-    #splash {
-      background-color: {{site.theme_color}};
-      display: grid;
-      width: 100vw;
-      justify-content: space-evenly;
-      justify-items: center;
-      align-content: end;
-      align-items: end;
-      margin: 0;
-      text-align: center;
-      scroll-snap-align: center;
-    }
-
-    #image-credit {
-      position: absolute;
-      font-size: x-small;
-      bottom: 1rem;
-      right: 1rem;
-      color: #000;
-      width: auto;
-      background-color:: {{site.theme_color}};
-      padding: 0.5em;
-      border-radius: 1em;
-    }
   </style>
 </head>
 
 <body>
-  <div id="splash" >
-          <img src={{ page.bg_image_link }} style="height: 50vh;" alt="Brisbane River logo motif">
+  <div class="splash" >
+          <img src={{ page.bg_image_link }} style="height: 50vmin;" alt="Brisbane River logo motif">
        <h2>{{site.description}}</h2> 
-      <div> 
-       <p class="hl"><a href="https://twitter.com/{{ site.twitter_username}}">Twitter</a></p>
-      <p class="hl"><a href="{{ site.discord_invite }}">
-          Discord</a>
-      </p>
+      <nav> 
+      {% assign entries = "discord,twitter" | split: ','  %}
+      {%- for entry in entries -%}
+      {%- for item in site.social_links -%}
+      {%- if item.platform == entry -%}
+      <p class="hl"><a href="{{ item.url }}">{{ item.platform | capitalize }}</a></p>
+      {%- endif -%} {%- endfor -%} {%- endfor -%}
       <p class="hl"><a href="mailto:{{ site.email }}">Email</a></p>
-      <p class="hl"><a href="/blog">Blog</a></p>
-      </div>
+
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+
+          {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {% unless my_page.exclude %}
+            {%- if my_page.title -%}
+            <p class="hl"><a href="{{ my_page.url | relative_url }}">
+              {{ my_page.title | escape }}</a></p>
+            {%- endif -%}
+            {% endunless  %}
+          {%- endfor -%}
+      
+      </nav>
     {% if page.bg_image_credit %}
-    <div id="image-credit">
+    <div class="image-credit">
       <a href="{{ page.bg_image_credit }}">Image
         credit</a>
     </div>
