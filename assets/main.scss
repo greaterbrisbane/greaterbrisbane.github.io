@@ -88,12 +88,16 @@ h1,h2,h3,h4,h5,h6,header {
       $tertiary-3-color 80%,
       $tertiary-3-color 100%,
   );
-  z-index: -1;
+  z-index: inherit;
 }
 
 .site-footer::before {
   top: -30px;
   left: 0;
+}
+
+nav {
+  z-index: 999;
 }
 
 .social-media-list {
