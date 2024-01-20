@@ -11,31 +11,56 @@ $tertiary-2-color: #71A95A;
 $tertiary-3-color: #87CEEB;
 $text-color:       #011A21;
 
+
+@media (prefers-color-scheme: dark ) {
+  :root {
+    --text-color: #{$background-color};
+    --bg-color: #{$text-color};
+  }  
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #{$text-color};
+    --bg-color: #{$background-color};
+  }  
+}
+
+
+
 body {
   padding: 0;
   font-family: 'Inter', sans-serif;
   font-size: 14pt;
   font-weight: 400;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
-a,
-a:visited {
+a, a:visited {
   color: inherit;
+}
+
+a:hover {
+  color: var(--text-color);
 }
 
 main a , main a:visited {
   text-decoration: underline; 
-  text-decoration-skip-ink: none;
-  text-decoration-color: $brand-color;
-  text-decoration-thickness: 0.4em;
-  text-underline-offset: -0.2em;
 }
-
+main a:hover , main a:visited:hover {
+  text-decoration: underline; 
+  text-decoration-color: $brand-color; 
+  text-decoration-thickness: 1.3em;
+  text-underline-offset: -1em;
+  text-decoration-skip-ink: none;
+  color: $text-color;
+}
 
 h1,h2,h3,h4,h5,h6,header {
   font-family: 'Inter';
   font-weight: 500;
   letter-spacing: -0.025ch;
+  color: var(--text-color);
 }
 
 .hl {
@@ -50,8 +75,21 @@ h1,h2,h3,h4,h5,h6,header {
   background-color: $brand-color; 
 }
 
-.site-title, .site-title:visited {
+.hl a:hover {
   color: $text-color;
+  text-decoration-color: $text-color;
+}
+
+.site-nav {
+  background-color: var(--bg-color);
+  border-color: grey;
+  .menu-icon {
+    fill: grey;
+  }
+}
+
+.site-title, .site-title:visited, .site-nav .page-link {
+  color: var(--text-color);
   font-weight: 500;
 }
 
@@ -66,8 +104,8 @@ h1,h2,h3,h4,h5,h6,header {
   object-fit: scale-down;
 }
 
-.site-header {
-  border-top: none; // override theme default
+.site-header, .site-footer {
+  border: none; // override theme default
 }
 
 .site-header::after,.site-footer::before {
@@ -92,7 +130,7 @@ h1,h2,h3,h4,h5,h6,header {
 }
 
 .site-footer::before {
-  top: -30px;
+  top: -30px; // .site-footer padding also 30px
   left: 0;
 }
 
@@ -107,17 +145,26 @@ nav {
   color: grey;
   li {
     float: left;
-    margin: 5px 10px 5px 0;
-    &:last-of-type { margin-right: 0 }
+    margin: 5px 10px;
     a {
       display: block;
       padding: 10px 12px;
+    }
+    a:hover {
+      background: $brand-color;
+      .svg-icon {
+        fill: $text-color;
+      }
     }
   }
 }
 
 .social-media-list li+li {
   padding-top: 0;
+}
+
+.svg-icon {
+  padding:0;
 }
 
 .splash {

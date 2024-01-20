@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Greater Brisbane
+# author: {legal name of association once incorporated}
 email: hello@greaterbrisbane.org
 description: >- # this means to ignore newlines until "baseurl:"
   For abundant housing and livable communities.

@@ -22,7 +22,7 @@
 <body>
   <div class="splash" >
           <img src={{ page.hero_image }} style="height: 50vmin;" alt="Brisbane River logo motif">
-       <h2>{{page.title | default: site.description | default: site.title }}</h2> 
+       <h2 class="hl">{{page.title | default: site.description | default: site.title }}</h2> 
       <nav> 
       {% assign entries = "discord,twitter" | split: ','  %}
       {%- for entry in entries -%}
