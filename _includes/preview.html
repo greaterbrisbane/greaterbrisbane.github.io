@@ -1,0 +1,14 @@
+{% assign meta = include.url | metadata %}
+
+<div class="card">
+  <a href="{{ include.url }}">
+  {% if meta['og:image'] != blank %}
+  <img src="{{ meta['og:image'] }}" />
+  {% else %}
+  <!-- Add a fallback image here, if the opengraph image for given url does not exist -->
+  {{ include.url }}
+  {% endif %}
+  <h4>{{ meta['title'] }}</h4>
+  <p>{{ meta['og:description'] }}</p>
+  </a>
+</div>

@@ -29,8 +29,8 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-font-awesome-sass
-
+  - jekyll-url-metadata
+  
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -50,3 +50,11 @@ social_links:
   - { platform: linkedin,      name: "LinkedIn",         url: "https://www.linkedin.com/company/greaterbrisbane" }
   - { platform: twitter,       name: "Twitter",         url: "https://twitter.com/greaterbne" }
   - { platform: rss,      name: "Feed",         url: "/feed.xml" }
+
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/splash-header.svg
+  

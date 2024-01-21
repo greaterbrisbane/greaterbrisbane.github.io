@@ -190,3 +190,31 @@ nav {
   padding: 0.5em;
   border-radius: 1em;
 }
+
+.card {
+  font-size: small;
+  padding: 0.5em;
+  margin-bottom: 15px;
+  background: #aaa2;
+
+  h1,h2,h3,h4,h5,h6 {
+    line-height: 1;
+    margin: 0.5em 0;
+    font-size: 1rem;
+    background:none;
+    color: inherit;
+  }
+  p {
+    background: none;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover, &:hover, h4:hover {
+    background: $brand-color;
+    color: $text-color;
+  }
+}
+
