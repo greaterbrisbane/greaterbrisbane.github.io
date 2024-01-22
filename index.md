@@ -1,6 +1,8 @@
 ---
 layout: splash
-hero_image: "assets/images/splash_header.svg"
+hero_image: 
+  src: "assets/images/splash_header.svg"
+  alt: "Brisbane River logo motif"
 ---
 
 Greater Brisbane is an all-volunteer grassroots urbanism collective trying to build a better city for everyone. We want a Brisbane where everyone is welcome and has the opportunity to live a good life wherever they want. 
