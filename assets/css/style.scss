@@ -135,6 +135,9 @@ nav {
   width: 100vw;
   margin: 0;
   text-align: center;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-credit {
