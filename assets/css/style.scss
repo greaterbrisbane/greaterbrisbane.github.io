@@ -1,17 +1,22 @@
 --- 
 
 --- 
-@import "{{ site.theme }}";
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
-$brand-color:      #FFE12D;
+$brand-color:      #FFE12D; // Minima 2.0 & this file
+$link-base-color:  #FFE12D; // Minima 3.0
 $secondary-color:  #FF4500;
 $tertiary-1-color: #B089D9;
 $tertiary-2-color: #71A95A;
 $tertiary-3-color: #87CEEB;
 $text-color:       #011A21;
 
-
+/*
 @media (prefers-color-scheme: dark ) {
   :root {
     --text-color: #{$background-color};
@@ -24,7 +29,7 @@ $text-color:       #011A21;
     --bg-color: #{$background-color};
   }  
 }
-
+*/
 
 
 body {
@@ -32,8 +37,8 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 14pt;
   font-weight: 400;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  // color: var(--text-color);
+  // background-color: var(--bg-color);
 }
 
 a, a:visited {
@@ -139,19 +144,13 @@ nav {
 }
 
 .social-media-list {
-  display: table;
-  margin: 0 auto;
-  font-size: small;
-  color: grey;
   li {
-    float: left;
-    margin: 5px 10px;
     a {
-      display: block;
-      padding: 10px 12px;
+      border: 1px solid #8888;
     }
     a:hover {
       background: $brand-color;
+      border: 1px solid $brand-color;
       .svg-icon {
         fill: $text-color;
       }
@@ -159,13 +158,6 @@ nav {
   }
 }
 
-.social-media-list li+li {
-  padding-top: 0;
-}
-
-.svg-icon {
-  padding:0;
-}
 
 .splash {
   background-color: $brand-color;

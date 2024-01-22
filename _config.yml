@@ -22,6 +22,12 @@ url: "https://www.greaterbrisbane.org" # the base hostname & protocol for your s
 lang: "en-AU"
 # authorisation: >-
 
+# OpenGraph relevant settings
+author: 
+  name: "Greater Brisbane" #{ change to legal name of association once incorporated}
+  twitter: greaterbne
+
+logo: "/assets/images/favicon.png"
 
 # Build settings
 markdown: kramdown
@@ -32,36 +38,41 @@ plugins:
 # show posts even if they seem to have a date in the future at build time
 future: true
 
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
 # For the links at the bottom of the site
-social_links:
-  - { platform: discord,         name: "Discord",         url: "https://discord.gg/fcr74BgzZU" }
-  - { platform: github,        name: "greaterbrisbane",         url: "https://github.com/greaterbrisbane" }
-  - { platform: linkedin,      name: "LinkedIn",         url: "https://www.linkedin.com/company/greaterbrisbane" }
-  - { platform: twitter,       name: "Twitter",         url: "https://twitter.com/greaterbne" }
-  - { platform: rss,      name: "Feed",         url: "/feed.xml" }
+# social_links:
+#   - { platform: discord,         name: "Discord",         url: "https://discord.gg/fcr74BgzZU" }
+#   - { platform: github,        name: "greaterbrisbane",         url: "https://github.com/greaterbrisbane" }
+#   - { platform: linkedin,      name: "LinkedIn",         url: "https://www.linkedin.com/company/greaterbrisbane" }
+#   - { platform: twitter,       name: "Twitter",         url: "https://twitter.com/greaterbne" }
+#   - { platform: rss,      name: "Feed",         url: "/feed.xml" }
 
-author: 
-  name: "Greater Brisbane" #{ change to legal name of association once incorporated}
-  twitter: greaterbne
+# Minima-specific settings
+minima:
+  skin: auto
+  social_links:
+    - { platform: discord,  title: "Discord",  user_url: "https://discord.gg/fcr74BgzZU" }
+    - { platform: github,   title: "GitHub",   user_url: "https://github.com/greaterbrisbane" }
+    - { platform: linkedin, title: "LinkedIn", user_url: "https://www.linkedin.com/company/greaterbrisbane" }
+    - { platform: twitter,  title: "Twitter",  user_url: "https://twitter.com/greaterbne" }
+    - { platform: rss,      title: "Feed",     user_url: "/feed.xml" }
 
-logo: "/assets/images/favicon.png"
+header_pages:
+  - blog.md
+  - newsletter.md
 
+# Various settings live under the "defaults" key
 defaults:
   - scope:
       path: ""
     values:
-      image: "/assets/images/favicon.png"
-  
+        image: "/assets/images/favicon.png"
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to extend the default setting.
+# exclude:

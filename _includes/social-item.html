@@ -1,8 +1,0 @@
-<li>{% assign entry = include.item %}
-  <a {% unless entry.platform == 'rss' %}rel="me" {% endunless %}href="{{ entry.url }}" target="_blank" title="{{ entry.name | default: entry.platform }}">
-    <svg class="svg-icon">
-      <use xlink:href="{{ '/assets/minima-social-icons.svg#' | append: entry.platform | relative_url }}"></use>
-    </svg>
-  <!---  <span class="username">{{ entry.name | default: entry.platform | escape }}</span> --->
-  </a>
-</li>
