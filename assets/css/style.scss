@@ -33,7 +33,7 @@ main a , main a:visited {
 main a:hover , main a:visited:hover {
   text-decoration: underline; 
   text-decoration-color: $brand-color; 
-  text-decoration-thickness: 2em;
+  text-decoration-thickness: 1.5em;
   text-underline-offset: -1em;
   text-decoration-skip-ink: none;
   color: $text-color;
@@ -47,22 +47,6 @@ h1,h2,h3,h4,h5,h6,header {
   color: var(--text-color);
 }
 
-.hl {
-  /* Highlighted */
-  background-origin: content-box;
-  background-size: 100% 100%;
-  background-repeat: repeat-x;
-  background-position-y: 64%;  
-  display: inline-block;
-  padding-inline: 1em;
-  color: $text-color;
-  background-color: $brand-color; 
-}
-
-.hl a:hover {
-  color: $text-color;
-  text-decoration-color: $text-color;
-}
 
 .site-title, .site-title:visited, .site-nav .page-link {
   color: var(--text-color);
@@ -129,6 +113,29 @@ nav {
   }
 }
 
+// make these the same as -3 by default (small) because they aren't stacking anyway
+.footer-col-1, .footer-col-2 { 
+  width: calc(100% - (#{$spacing-unit} / 2));
+}
+
+/***** Custom Classes *****/
+
+.hl {
+  /* Highlighted */
+  background-origin: content-box;
+  background-size: 100% 100%;
+  background-repeat: repeat-x;
+  background-position-y: 64%;  
+  display: inline-block;
+  padding-inline: 1em;
+  color: $text-color;
+  background-color: $brand-color; 
+}
+
+.hl a:hover {
+  color: $text-color;
+  text-decoration-color: $text-color;
+}
 
 .splash {
   background-color: $brand-color;
