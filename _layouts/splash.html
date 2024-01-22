@@ -2,26 +2,16 @@
 
 ---
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " en" }}">
-{%- include head.html -%}
-{%- include custom_head.html -%}
-
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap"
-    rel="stylesheet">
-  <style type="text/css">
-    body {
-      scroll-snap-type: proximity;
-    }
-
-  </style>
+  {%- include head.html -%}
 </head>
 
 <body>
   <div class="splash" >
-          <img src={{ page.hero_image }} style="height: 50vmin;" alt="Brisbane River logo motif">
+          <img src="{{ page.hero_image.src }}" style="height: 50vmin;" 
+          {%- if page.hero_image.srcset -%} srcset="{{ page.hero_image.srcset }}" {%- endif -%}          
+          alt="{{ page.hero_image.alt }}" >
        <h2 class="hl">{{page.title | default: site.description | default: site.title }}</h2> 
       <nav> 
       {% assign entries = "discord,twitter" | split: ','  %}

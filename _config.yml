@@ -14,13 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Greater Brisbane
-# author: {legal name of association once incorporated}
 email: hello@greaterbrisbane.org
 description: >- # this means to ignore newlines until "baseurl:"
   For abundant housing and livable communities.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.greaterbrisbane.org" # the base hostname & protocol for your site, e.g. http://example.com
-rss: Posts # this is just the display text, not the link
+lang: "en-AU"
 # authorisation: >-
 
 
@@ -32,6 +31,7 @@ plugins:
   - jekyll-url-metadata
 # show posts even if they seem to have a date in the future at build time
 future: true
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -45,7 +45,7 @@ future: true
 #   - vendor/gems/
 #   - vendor/ruby/
 
-
+# For the links at the bottom of the site
 social_links:
   - { platform: discord,         name: "Discord",         url: "https://discord.gg/fcr74BgzZU" }
   - { platform: github,        name: "greaterbrisbane",         url: "https://github.com/greaterbrisbane" }
@@ -53,10 +53,15 @@ social_links:
   - { platform: twitter,       name: "Twitter",         url: "https://twitter.com/greaterbne" }
   - { platform: rss,      name: "Feed",         url: "/feed.xml" }
 
+author: 
+  name: "Greater Brisbane" #{ change to legal name of association once incorporated}
+  twitter: greaterbne
+
+logo: "/assets/images/favicon.png"
 
 defaults:
   - scope:
       path: ""
     values:
-      image: /assets/images/splash-header.svg
+      image: "/assets/images/favicon.png"
   
