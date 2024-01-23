@@ -20,7 +20,7 @@
       {%- if item.platform == entry -%}
       <p class="hl"><a href="{{ item.user_url }}">{{ item.title | default: item.platform | capitalize }}</a></p>
       {%- endif -%} {%- endfor -%} {%- endfor -%}
-      <p class="hl"><a href="mailto:{{ site.email }}">Email</a></p>
+      <p class="hl"><a href="mailto:{{ site.author.email }}">Email</a></p>
 
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
