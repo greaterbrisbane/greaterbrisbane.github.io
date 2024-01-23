@@ -5,4 +5,8 @@
 {% assign p_img_src = meta['og:image'] %}
 {% assign p_description = meta['og:description'] %}
 
+{% if include.image %}
+{% assign p_img_src = include.image %}
+{% endif %}
+
 {% include card.html  url=p_url title=p_title  img_src=p_img_src  description=p_description %}
