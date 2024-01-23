@@ -18,7 +18,7 @@
       {%- for entry in entries -%}
       {%- for item in site.minima.social_links -%}
       {%- if item.platform == entry -%}
-      <p class="hl"><a href="{{ item.url }}">{{ item.title | default: item.platform | capitalize }}</a></p>
+      <p class="hl"><a href="{{ item.user_url }}">{{ item.title | default: item.platform | capitalize }}</a></p>
       {%- endif -%} {%- endfor -%} {%- endfor -%}
       <p class="hl"><a href="mailto:{{ site.email }}">Email</a></p>
 
