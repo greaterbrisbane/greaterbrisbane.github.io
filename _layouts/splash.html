@@ -22,6 +22,11 @@
       {%- endif -%} {%- endfor -%} {%- endfor -%}
       <p class="hl"><a href="mailto:{{ site.author.email }}">Email</a></p>
 
+    {%- for cat in site.categories -%}
+      {%- assign this_cat = cat | first | strip_html -%}
+      <p class="hl"><a class="page-link" href="{{ this_cat | slugify | prepend: '/category/' | relative_url }}">{{ this_cat }}</a></p>
+    {%- endfor -%}
+    
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "First Meetup"
-categories: ["event"]
+categories: ["Events"]
 ---
 
 Our first meetup for the year is 6PM, Thursday 18th January at the Scratch Bar in Milton. 

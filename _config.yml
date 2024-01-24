@@ -35,6 +35,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-url-metadata
+  - jekyll-paginate-v2
 # show posts even if they seem to have a date in the future at build time
 future: true
 
@@ -63,6 +64,27 @@ defaults:
     values:
       layout: post
 
+# Create categories index pages
+# refer to  https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-AUTOPAGES.md
+autopages:
+  enabled: true
+  categories: 
+    title: ":cat"
+    layouts:
+      - 'autopage.html'
+    slugify:
+      mode: 'pretty' # :cat is slugified. Modes: default, raw, pretty, ascii, latin
+      case: false
+  collections:
+    title: ":coll"
+    layouts:
+      - 'autopage.html'
+  tags:
+    title: ":tag"
+    layouts:
+      - 'autopage.html'
+pagination:
+  enabled: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
