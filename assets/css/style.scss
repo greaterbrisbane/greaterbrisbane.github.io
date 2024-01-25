@@ -120,7 +120,7 @@ nav {
 
 /***** Custom Classes *****/
 
-.hl {
+.hl, a.hl {
   /* Highlighted */
   background-origin: content-box;
   background-size: 100% 100%;
@@ -129,12 +129,17 @@ nav {
   display: inline-block;
   padding-inline: 1em;
   color: $text-color;
-  background-color: $brand-color; 
+  background-color: $brand-color;
+  text-decoration: none; 
 }
 
-.hl a:hover {
+.hl a:hover, a.hl:hover {
   color: $text-color;
-  text-decoration-color: $text-color;
+  background-color: $brand-color;
+  text-decoration-color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
 }
 
 .splash {
@@ -189,4 +194,14 @@ nav {
   a {
     text-decoration:none;
   }
+}
+
+.button {
+  @extend .hl;
+  border-radius: 0;
+  font-weight: 900;
+  text-align: center;
+  padding: 0.5em 4em;
+  display: inline-block;
+  text-decoration:none;
 }
