@@ -58,7 +58,7 @@ defaults:
   - scope:
       path: ""
     values:
-        image: "/assets/images/favicon.png"
+        image: "/assets/images/splash_header_72.png"
   - scope:
       path: "_posts"
     values:
