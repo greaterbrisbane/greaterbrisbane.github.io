@@ -150,6 +150,22 @@ nav {
   display: grid;
   align-items: center;
   justify-content: center;
+  font-weight: 500;
+}
+
+.splash .social-media-list a {
+  .svg-icon {
+    fill: $text-color;
+  }
+  background: none;
+  border: none;
+  &:hover {
+    background: $text-color;
+    .svg-icon {
+      fill: $brand-color;
+    }
+    border: none;
+  }
 }
 
 .image-credit {

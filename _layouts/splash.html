@@ -14,14 +14,6 @@
           alt="{{ page.hero_image.alt }}" >
        <h2 class="hl">{{page.title | default: site.description | default: site.title }}</h2> 
       <nav> 
-      {% assign entries = "discord,twitter" | split: ','  %}
-      {%- for entry in entries -%}
-      {%- for item in site.minima.social_links -%}
-      {%- if item.platform == entry -%}
-      <p class="hl"><a href="{{ item.user_url }}">{{ item.title | default: item.platform | capitalize }}</a></p>
-      {%- endif -%} {%- endfor -%} {%- endfor -%}
-      <p class="hl"><a href="mailto:{{ site.author.email }}">Email</a></p>
-
     {%- for cat in site.categories -%}
       {%- assign this_cat = cat | first | strip_html -%}
       <p class="hl"><a class="page-link" href="{{ this_cat | slugify | prepend: '/category/' | relative_url }}">{{ this_cat }}</a></p>
@@ -35,8 +27,8 @@
           <p class="hl"><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></p>
         {%- endunless -%}
       {%- endif -%} {%- endfor -%}
-    
-    </nav>
+      {% include social.html %}
+     </nav>
     {% if page.hero_image.credit %}
     <div class="image-credit">
       <a href="{{ page.hero_image.credit }}">Image
