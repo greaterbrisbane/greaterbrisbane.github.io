@@ -1,3 +1,34 @@
+{% comment %}
+
+Component to include a URL preview as a card.
+
+USAGE
+
+  {% include preview.html url="example.com" %}
+
+Parameters are as follows:
+
+  * description (optional)
+  * image (optional)
+  * title (optional)
+  * url (required)
+
+At build time, the specified URL will be retrieved by the `jekyll-url-metadata`
+gem and searched for <title>, <meta type="description"> and <meta type=image> tags.
+These results form the default values for the optional parameters.
+
+Each optional parameter can be passed as `false` to disable it. 
+
+DEPENDENCIES
+
+  * the jekyll-url-metadata gem
+  * _includes/card.html
+
+{% endcomment %}
+
+
+
+
 {% assign meta = include.url | metadata %}
 
 {% assign p_url = include.url %}
@@ -5,8 +36,55 @@
 {% assign p_img_src = meta['og:image'] %}
 {% assign p_description = meta['og:description'] %}
 
+
+
+
 {% if include.image %}
-{% assign p_img_src = include.image %}
+  {% assign p_img_src = include.image %}
 {% endif %}
 
-{% include card.html  url=p_url title=p_title  img_src=p_img_src  description=p_description %}
+{% if include.description %}
+  {% assign p_description = include.description %}
+{% endif %}
+
+{% if include.title %}
+  {% assign p_title = include.title %}
+{% endif %}
+
+
+
+
+{% if include.title == false %}
+
+  {% if include.description == false and include.image != false %}
+    {% include card.html  url=p_url img_src=p_img_src %}
+  
+  {% elsif include.image == false and include.description != false  %}
+    {% include card.html  url=p_url description=p_description %}
+
+  {% elsif include.image == false and include.description == false  %}
+    {% include card.html  url=p_url %}
+
+  {% else  %}
+    {% include card.html  url=p_url img_src=p_img_src  description=p_description %}
+
+  {% endif %}
+
+{% else %}
+
+  {% if include.description == false and include.image != false %}
+    {% include card.html  url=p_url img_src=p_img_src title=p_title %}
+  
+  {% elsif include.image == false and include.description != false  %}
+    {% include card.html  url=p_url description=p_description title=p_title %}
+
+  {% elsif include.image == false and include.description == false  %}
+    {% include card.html  url=p_url title=p_title %}
+
+  {% else  %}
+    {% include card.html  url=p_url img_src=p_img_src  description=p_description title=p_title %}
+
+  {% endif %}
+
+
+{% endif %}
