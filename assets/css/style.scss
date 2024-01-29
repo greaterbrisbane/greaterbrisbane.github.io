@@ -221,3 +221,36 @@ nav {
   display: inline-block;
   text-decoration:none;
 }
+
+.card-holder {
+  display: flex;
+  flex-wrap: wrap;
+
+  &>* {
+    margin-inline-end: 2em;
+    width: 30%;
+  }
+
+  .card {
+    background: none;
+    word-wrap: break-word;
+  }
+}
+
+
+hr {
+  height: 0.2rem;
+  background: linear-gradient(
+    90deg,
+  	$brand-color 20%,
+    $secondary-color 20%,
+    $secondary-color 40%,
+    $tertiary-1-color 40%,
+    $tertiary-1-color 60%,
+    $tertiary-2-color 60%,
+    $tertiary-2-color 80%,
+    $tertiary-3-color 80%,
+    $tertiary-3-color 100%,
+  );
+  border: none;
+}
