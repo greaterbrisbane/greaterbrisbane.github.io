@@ -223,13 +223,9 @@ nav {
 }
 
 .card-holder {
-  display: flex;
-  flex-wrap: wrap;
-
-  &>* {
-    margin-inline-end: 2em;
-    width: 30%;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
 
   .card {
     background: none;
