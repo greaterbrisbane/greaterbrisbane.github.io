@@ -13,10 +13,11 @@
           {%- if page.hero_image.srcset -%} srcset="{{ page.hero_image.srcset }}" {%- endif -%}          
           alt="{{ page.hero_image.alt }}" >
        <h2 class="hl">{{page.title | default: site.description | default: site.title }}</h2> 
-      <nav> 
+      <nav>
+      <ul> 
     {%- for cat in site.categories -%}
       {%- assign this_cat = cat | first | strip_html -%}
-      <p class="hl"><a class="page-link" href="{{ this_cat | slugify | prepend: '/category/' | relative_url }}">{{ this_cat }}</a></p>
+      <li class="hl"><a class="page-link" href="{{ this_cat | slugify | prepend: '/category/' | relative_url }}">{{ this_cat }}</a></li>
     {%- endfor -%}
     
     {%- assign default_paths = site.pages | map: "path" -%}
@@ -24,9 +25,10 @@
     
       {%- for path in page_paths -%} {%- assign my_page = site.pages | where: "path", path | first -%} {%- if my_page.title -%}
         {% unless my_page.exclude %}
-          <p class="hl"><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></p>
+          <li class="hl"><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
         {%- endunless -%}
       {%- endif -%} {%- endfor -%}
+      </ul>
       {% include social.html %}
      </nav>
     {% if page.hero_image.credit %}

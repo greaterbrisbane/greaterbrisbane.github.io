@@ -16,6 +16,21 @@ $tertiary-2-color: #71A95A;
 $tertiary-3-color: #87CEEB;
 $text-color:       #011A21;
 
+%stripy {
+  background: linear-gradient(
+      90deg,
+    	$brand-color 20%,
+      $secondary-color 20%,
+      $secondary-color 40%,
+      $tertiary-1-color 40%,
+      $tertiary-1-color 60%,
+      $tertiary-2-color 60%,
+      $tertiary-2-color 80%,
+      $tertiary-3-color 80%,
+      $tertiary-3-color 100%,
+  );
+}
+
 body {
   padding: 0;
   font-family: 'Inter', sans-serif;
@@ -30,14 +45,13 @@ a, a:visited {
 main a , main a:visited {
   text-decoration: underline; 
 }
-main a:hover , main a:visited:hover {
+main a:hover, main a:visited:hover {
   text-decoration: underline; 
   text-decoration-color: $brand-color; 
   text-decoration-thickness: 1.5em;
   text-underline-offset: -1em;
   text-decoration-skip-ink: none;
   color: $text-color;
-  background: none;
 }
 
 h1,h2,h3,h4,h5,h6,header {
@@ -69,24 +83,13 @@ h1,h2,h3,h4,h5,h6,header {
 }
 
 .site-header::after,.site-footer::before {
+    @extend %stripy;
     content: '';
     position:relative;
     display: block;
     width:100%;
     height:0.5em;
-    background: linear-gradient(
-      90deg,
-    	$brand-color 20%,
-      $secondary-color 20%,
-      $secondary-color 40%,
-      $tertiary-1-color 40%,
-      $tertiary-1-color 60%,
-      $tertiary-2-color 60%,
-      $tertiary-2-color 80%,
-      $tertiary-3-color 80%,
-      $tertiary-3-color 100%,
-  );
-  z-index: inherit;
+    z-index: inherit;
 }
 
 .site-footer::before {
@@ -127,19 +130,18 @@ nav {
   background-repeat: repeat-x;
   background-position-y: 64%;  
   display: inline-block;
-  padding-inline: 1em;
+  // padding-inline: 1em;
   color: $text-color;
   background-color: $brand-color;
   text-decoration: none; 
 }
 
-.hl a:hover, a.hl:hover {
-  color: $text-color;
-  background-color: $brand-color;
-  text-decoration-color: inherit;
+.hl a:hover, a.hl:hover, .hl a:visited:hover, a.hl:visited:hover {
+  @extend .hl;
   text-decoration: underline;
-  text-decoration-thickness: auto;
-  text-underline-offset: auto;
+  text-decoration-color: currentcolor;
+  text-decoration-thickness: inherit;
+  text-underline-offset: inherit;
 }
 
 .splash {
@@ -151,6 +153,10 @@ nav {
   align-items: center;
   justify-content: center;
   font-weight: 500;
+}
+
+.splash .page-link {
+  margin-inline: 1em;
 }
 
 .splash .social-media-list a {
@@ -217,9 +223,12 @@ nav {
   border-radius: 0;
   font-weight: 900;
   text-align: center;
-  padding: 0.5em 4em;
+  padding: 0.5em 1em;
   display: inline-block;
-  text-decoration:none;
+}
+
+.button:hover, a.button:hover {
+  @extend .hl;
 }
 
 .card-holder {
@@ -235,18 +244,18 @@ nav {
 
 
 hr {
+  @extend %stripy;
   height: 0.2rem;
-  background: linear-gradient(
-    90deg,
-  	$brand-color 20%,
-    $secondary-color 20%,
-    $secondary-color 40%,
-    $tertiary-1-color 40%,
-    $tertiary-1-color 60%,
-    $tertiary-2-color 60%,
-    $tertiary-2-color 80%,
-    $tertiary-3-color 80%,
-    $tertiary-3-color 100%,
-  );
   border: none;
 }
+
+.pager {
+  margin: 0;
+  li {
+    display: inline-block;
+  }
+  a {
+    @extend .button;
+  }
+}
+

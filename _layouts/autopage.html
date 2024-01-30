@@ -3,11 +3,6 @@ layout: base
 # adapted from https://github.com/sverrirs/jekyll-paginate-v2/blob/master/examples/03-tags/_layouts/autopage_tags.html
 ---
 <!-- Just some nice to have styles for the pager buttons -->
-<style>
-  ul.pager { text-align: center; list-style: none; }
-  ul.pager li {display: inline;border: 1px solid black; padding: 10px; margin: 5px;}
-</style>
-
 <div class="home">
 
   <h1 class="page-heading">{% if page.autopages %}{{page.autopages.display_name}}{% endif %}</b></h1>
@@ -24,7 +19,7 @@ layout: base
         </h2>
       </li>
     {% endfor %}
-  </ul>
+   </ul>
   
   <!-- 
     Showing buttons to move to the next and to the previous list of posts (pager buttons).
@@ -33,12 +28,12 @@ layout: base
   <ul class="pager">
       {% if paginator.previous_page %}
       <li class="previous">
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Previous</a>
       </li>
       {% endif %}
       {% if paginator.next_page %}
       <li class="next">
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &rarr;</a>
       </li>
       {% endif %}
   </ul>

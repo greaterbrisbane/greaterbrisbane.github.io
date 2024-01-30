@@ -83,8 +83,10 @@ autopages:
     title: ":tag"
     layouts:
       - 'autopage.html'
+    
 pagination:
   enabled: true
+  # pagination must be enabled to have autopages go
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
