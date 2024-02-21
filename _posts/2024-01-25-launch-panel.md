@@ -25,4 +25,4 @@ How can Brisbane City Council build more homes where people want to live?
 
 [Get Tickets](https://events.humanitix.com/launch-panel/tickets){:.button}
 
-*N.B. We have moved venues!*
+*N.B. We have moved venues (to the Polish Club) to allow for more attendees!*
