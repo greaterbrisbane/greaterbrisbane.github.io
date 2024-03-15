@@ -2,6 +2,7 @@
 title: "Brisbane City Council mayoral election: urbanist scorecard"
 categories:
   - Advocacy
+image: "/assets/images/2024-02-07-bcc-urbanist-scorecard/hero.jpeg"
 ---
 
 On February 2nd, we reached out to Adrian Schrinner (incumbent Lord Mayor, LNP), Tracey Price (Labor) and Jonathan Sriranganathan (Greens) with an invitation to respond to our survey on what their plans are for housing, planning and transport reform. 
