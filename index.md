@@ -23,6 +23,18 @@ We advocate for better land use, transport and streetscapes to make our city mor
 
 As long as people want to live in our city, we need to make sure we have enough modern, affordable homes for all of them. To do this we need to build abundant housing of all types and tenures where people want to live — public, private and commons, townhouses to skyscrapers.
 
+---
+
+{% for post in site.posts limit:1 %}
+  {% include card.html 
+    url=post.url 
+    title=post.title 
+    description=post.description 
+    img_src=post.image %}
+{% endfor %}
+
+--- 
+
 <div class="ml-embedded" data-form="SZhH3D"></div>
 
 ---
