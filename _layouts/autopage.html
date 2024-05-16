@@ -11,6 +11,16 @@ layout: base
         Here is the main paginator logic called.
         All calls to site.posts should be replaced by paginator.posts 
     -->
+    {% if site.autopages.categories.reversals contains page.autopages.display_name %}
+    {% for post in paginator.posts reversed %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+    {% else %}
     {% for post in paginator.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -19,6 +29,7 @@ layout: base
         </h2>
       </li>
     {% endfor %}
+    {% endif %}
    </ul>
   
   <!-- 

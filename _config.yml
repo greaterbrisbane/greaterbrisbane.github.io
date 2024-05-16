@@ -75,6 +75,9 @@ autopages:
     slugify:
       mode: 'pretty' # :cat is slugified. Modes: default, raw, pretty, ascii, latin
       case: false
+    reversals:
+      - Advocacy
+      - Events
   collections:
     title: ":coll"
     layouts:
