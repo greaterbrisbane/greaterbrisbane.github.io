@@ -1,5 +1,5 @@
 ---
-title: "BCC: Rethinking Parking Minumums"
+title: "BCC: Rethinking Parking Minimums"
 categories:
 - Advocacy
 description: "Greater Brisbane welcomes Brisbane City Council rethinking parking minimums — but this is just the beginning"
