@@ -51,6 +51,7 @@ minima:
 
 header_pages:
   - blog.md
+  - submissions.md
   - newsletter.md
 
 # Various settings live under the "defaults" key
