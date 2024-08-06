@@ -19,11 +19,13 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.greaterbrisbane.org" # the base hostname & protocol for your site, e.g. http://example.com
 lang: "en-AU"
-# authorisation: >-
-
+authorisation: >-
+  Greater Brisbane Urbanists Inc. 
+  IA4770994 (Qld.)  
+ 
 # OpenGraph relevant settings
 author: 
-  name: "Greater Brisbane" #{ change to legal name of association once incorporated}
+  name: "Greater Brisbane" # Just put legal name and incorp number in authorisation for now
   twitter: greaterbne
   email: hello@greaterbrisbane.org
 
