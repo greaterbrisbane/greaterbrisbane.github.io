@@ -45,10 +45,10 @@ future: true
 minima:
   skin: auto
   social_links:
-    - { platform: discord,  title: "Discord",  user_url: "https://discord.gg/fcr74BgzZU" }
-    - { platform: github,   title: "GitHub",   user_url: "https://github.com/greaterbrisbane" }
-    - { platform: linkedin, title: "LinkedIn", user_url: "https://www.linkedin.com/company/greaterbrisbane" }
     - { platform: twitter,  title: "Twitter",  user_url: "https://twitter.com/greaterbne" }
+    - { platform: discord,  title: "Discord",  user_url: "https://discord.gg/fcr74BgzZU" }
+    - { platform: linkedin, title: "LinkedIn", user_url: "https://www.linkedin.com/company/greaterbrisbane" }
+    - { platform: github,   title: "GitHub",   user_url: "https://github.com/greaterbrisbane" }
     - { platform: rss,      title: "Feed",     user_url: "/feed.xml" }
 
 header_pages:
