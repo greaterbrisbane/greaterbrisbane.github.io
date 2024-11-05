@@ -20,7 +20,7 @@ Even more surprising is City West around Petrie Terrace, Caxton Street, Victoria
 
 And while this proposal just changes the boundaries that apply to existing rules, there's still a lot of work to get those rules up to scratch. To start, the reduced minimums within 400 metres of a public transport hub STILL don't apply to residential developments!
 
-![Table of official and our proposed changes](/assets/images/2024-11-05-city-core-and-frame-parking/table.jpeg)
+![Table of official and our proposed changes](/assets/images/2024-11-05-city-core-and-frame-parking/table.png)
 
 We're also facing a situation where the Brisbane Central Traffic Area, which governs on-street parking restrictions, don't align with the City Frame which governs off-street parking minimums.
 
