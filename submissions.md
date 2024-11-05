@@ -10,6 +10,7 @@ We regularly make submissions to inquiries and reviews into legislation in areas
 
 | Date       |Body | Submission (PDF)| 
 |------------|-----|------------|
+| 2024-11-01 | Strategic Planning, City Planning and Economic Development (BCC) | [Tailored amendment package — Car parking](/assets/files/2024-01-11-City-Core-and-Frame-parking.pdf)
 | 2024-07-17 | Economic Development Qld | [The Woolloongabba Plan](/assets/files/2024_07_17_Woolloongabba_Plan.pdf)
 | 2024-07-02 | Economic Development Qld | [The draft Economic Development (Affordable Housing) Amendment Regulation 2024](/assets/files/2024_07_02_Economic_Development_Affordable_Housing_Amendment_Regulation_2024.pdf) 
 | 2024-06-16 | Neighbourhood Planning (BCC) | [The draft Nathan, Salisbury, Moorooka Neighbourhood Plan (BCC)](/assets/files/2024_06_16_Nathan_Salisbury_and_Moorooka_Neighbourhood_Plan.pdf)
