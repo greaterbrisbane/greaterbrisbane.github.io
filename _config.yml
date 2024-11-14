@@ -46,6 +46,7 @@ future: true
 minima:
   skin: auto
   social_links:
+    - { platform: bluesky,  title: "BlueSky",  user_url: "https://bsky.app/profile/greaterbrisbane.org" }
     - { platform: twitter,  title: "Twitter",  user_url: "https://twitter.com/greaterbne" }
     - { platform: discord,  title: "Discord",  user_url: "https://discord.gg/fcr74BgzZU" }
     - { platform: linkedin, title: "LinkedIn", user_url: "https://www.linkedin.com/company/greaterbrisbane" }
