@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg width="400.00003" height="400.00003" viewBox="0 0 105.83334 105.83334" version="1.2" xml:space="preserve" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg">
+  <title>Greater Brisbane</title>
+  <g id="layer1" transform="translate(-52.083328,-65.425232)">
+    <circle id="path5" cx="105" cy="118.3419" r="52.916668" fill="#fddf2c" fill-opacity="1"/>
+      <path d="m 101.03123,122.31065 v 34.39583 L 90.447894,146.12315 v -13.22917 h -13.22915 l -10.58334,-10.58333 z" fill="#6fa757" fill-opacity="1"/>
+      <path d="m 116.90624,105.11273 v 34.39583 L 106.3229,128.92523 V 115.69606 H 93.09375 L 82.51041,105.11273 Z" fill="#af88d6" fill-opacity="1"/>
+      <path d="M 134.10416,89.237731 V 123.63356 L 123.52082,113.05023 V 99.821062 H 110.29167 L 99.708326,89.237731 Z" fill="#fb4500" fill-opacity="1"/>
+  </g>
+</svg>
